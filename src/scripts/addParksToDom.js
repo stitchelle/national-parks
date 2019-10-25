@@ -1,8 +1,14 @@
 // string that enters search form into HTML
+let visitedPark = "";
 const buildAndAppendPark = (parksObject) => {
-    return `
+    if (parksObject.visited) {
+      visitedPark = true
+    } else {
+      visitedPark = false
+    }
+  return `
         <article>
-            <h3>${parksObject.name}</h3>
+            <h3 class = "${visitedPark}">${parksObject.name}</h3>
             <p>${parksObject.state}</p>
         </article>
     `
