@@ -7,8 +7,8 @@ const buildAndAppendPark = (parksObject) => {
       visitedPark = false
     }
   return `
-        <article>
-            <h3 class = "${visitedPark}">${parksObject.name}</h3>
+        <article class = "${visitedPark}">
+            <h3>${parksObject.name}</h3>
             <p>${parksObject.state}</p>
         </article>
     `
